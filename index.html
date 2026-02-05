@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi To-Do List</title>
+   
+</head>
+<body>
+
+    <div class="container">
+        <h1>Todo List</h1>
+
+        <div class="form-input">
+            <input type="text" id="inputTugas" placeholder="Tambahkan tugas...">
+            <input type="date" id="inputTanggal">
+            <button class="btn-tambah" onclick="tambahTugas()">+</button>
+        </div>
+        <div id="validasiTeks" class="pesan-error">* Masukkan judul tugas</div>
+        <div id="validasiTanggal" class="pesan-error">* Pilih tanggal jatuh tempo</div>
+
+        <div class="kontrol-panel">
+            <div class="filter-grup">
+                <label style="font-size: 13px; color: #94a3b8;">Filter: </label>
+                <select id="filterStatus" onchange="tampilkanDaftar()">
+                    <option value="semua">Semua</option>
+                    <option value="belum">Belum Selesai</option>
+                    <option value="selesai">Selesai</option>
+                </select>
+            </div>
+            <button class="btn-hapus-semua" onclick="hapusSemuaTugas()">Hapus Semua</button>
+        </div>
+
+        
+        <div class="tabel-wadah">
+            <table>
+                <thead>
+                    <tr>
+                        <th>TUGAS</th>
+                        <th>TANGGAL</th>
+                        <th>STATUS</th>
+                        <th style="text-align: right;">AKSI</th>
+                    </tr>
+                </thead>
+                <tbody id="wadahData">
+                 
+                </tbody>
+            </table>
+            <div id="pesanKosong">Belum ada tugas!</div>
+        </div>
+    </div>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
+
