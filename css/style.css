@@ -1,0 +1,190 @@
+
+        :root {
+            --warna-latar: #0b1120;
+            --warna-kartu: #1e293b;
+            --warna-input: #0f172a;
+            --warna-teks: #f1f5f9;
+            --warna-aksen: #6366f1;
+            --warna-bahaya: #ef4444;
+            --warna-sukses: #22c55e;
+            --warna-garis: #334155;
+        }
+
+        body {
+            background-color: var(--warna-latar);
+            color: var(--warna-teks);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: var(--warna-kartu);
+            width: 90%;
+            max-width: 700px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 28px;
+            color: var(--warna-teks);
+        }
+
+        /* Form Input */
+        .form-input {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"], input[type="date"] {
+            background-color: var(--warna-input);
+            border: 1px solid var(--warna-garis);
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            flex: 1;
+        }
+
+        input[type="text"]:focus, input[type="date"]:focus {
+            border-color: var(--warna-aksen);
+        }
+
+        .btn-tambah {
+            background-color: var(--warna-aksen);
+            color: white;
+            border: none;
+            padding: 0 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .btn-tambah:hover {
+            opacity: 0.9;
+        }
+
+        /* Pesan Validasi */
+        .pesan-error {
+            color: var(--warna-bahaya);
+            font-size: 12px;
+            text-align: left;
+            margin-bottom: 15px;
+            display: none;
+            font-style: italic;
+        }
+
+        /* Filter & Global Actions */
+        .kontrol-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0,0,0,0.2);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .filter-grup select {
+            background: var(--warna-input);
+            color: white;
+            border: 1px solid var(--warna-garis);
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-hapus-semua {
+            background-color: transparent;
+            color: var(--warna-bahaya);
+            border: 1px solid var(--warna-bahaya);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .btn-hapus-semua:hover {
+            background-color: var(--warna-bahaya);
+            color: white;
+        }
+
+ 
+        .tabel-wadah {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        th {
+            border-bottom: 1px solid var(--warna-garis);
+            padding: 12px 10px;
+            color: #94a3b8;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px 10px;
+            border-bottom: 1px solid #2d3748;
+            font-size: 14px;
+        }
+
+        .tugas-selesai {
+            text-decoration: line-through;
+            color: #64748b;
+        }
+
+   
+        .badge-status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .belum-selesai { background: rgba(234, 179, 8, 0.2); color: #eab308; }
+        .sudah-selesai { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+
+        .btn-aksi {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .btn-aksi:hover {
+            color: var(--warna-bahaya);
+        }
+
+        #pesanKosong {
+            padding: 30px;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        @media (max-width: 480px) {
+            .form-input { flex-direction: column; }
+            .btn-tambah { padding: 12px; }
+        }
